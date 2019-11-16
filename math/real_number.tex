@@ -1,0 +1,84 @@
+% !TeX root = ./main.tex
+
+\section{实数体系}
+
+\begin{exposition}
+根据分割（Dedekind 分割）的定义，每一个分割都可以由一个有理数确定。也就是说分割可以表示为 $r^*$：
+\[
+     r^* = \{s \in \mathbb{Q} | s < r, r \in \mathbb{Q}\}
+\]
+\end{exposition}
+
+\begin{exposition}
+    使用 Dedekind 构造方式时，将实数 $\mathbb{R}$ 视作所有有理数 $\mathbb{Q}$ 的 Ddede-kind 分割的集合。
+    每一个 Dedekind 分割实际上是一个有理数 $\mathbb{Q}$ 的子集。
+    我们在分割的基础上定义了次序关系，次序关系的定义为上下界的定义定下基础，从而阐明后面的确界性质。
+    最后将实数表示为某个非空子集的上确界。
+\end{exposition}
+
+\begin{exposition}
+    什么是实数？实数是填补了有理数之间的空隙后所组成的数系。这些空隙应该是处处存在的。
+    但是任意两个有理数之间仍存在一个有理数，也就是说有理数集具有稠密性（整数集不存在）。
+    被填补后所组成的实数集仍具有该性质，是有理数集的父集。
+    用以填补有理数空隙的数被称为无理数。
+\end{exposition}
+
+\begin{exposition}
+    有理数集使用分数的形式，采用字典排序的方法可以得出有理数集是可数的。
+    但实数集也是可数的吗？实数的可数性应该如何证明？
+\end{exposition}
+
+\begin{exposition}
+    Archimedes 原理：设 $0 < x \in \mathbb{R}$，则任给 $y \in \mathbb{R}$，
+    均存在正整数 n 使得 $y < nx$.
+
+    可以说明数列 $\{nx | n \in \mathbb{N}, x \in \mathbb{R}^{+}\}$ 没有上界，
+    即可证明阿基米德原理。但是阿基米德原理想要表达什么？
+
+    在 Dedekind 分割所构造的实数体系中，阿基米德原理被用来证明有理数在实数中的稠密性。
+    事实上对于非 Dedekind 构造方法的实数系可能并不需要引入阿基米德原理来证明实数系的稠密性。
+\end{exposition}
+
+\begin{exposition}
+    实数系的各种构造方法所构造出来对象，最终都要证明其是具有确界原理的有序域，
+    这是实数集的本质特征。
+    各种构造方法所构造出来的有确界原理的有序域是互相同构的，它们都是实数集。
+\end{exposition}
+
+\begin{question}
+    设 $\alpha$ 是 $\mathbb{Q}$ 的一个分割，则:
+    \begin{enumerate}[label=(\arabic*)]
+        \item 如果 $p < q, q \in \alpha$，则 $p \in \alpha$；
+        \item 设 $\omega > 0$，则存在 $n \in \mathbb{N}$，
+              使得 $n\omega \in \alpha$，$(n+1)\omega \in \alpha^\complement$
+    \end{enumerate}
+\end{question}
+\begin{proof}
+    第一个问利用 Dedekind 分割的定义即可。
+    
+    第二个问题则关于确界原理。
+    设集合 $A=\{n| n\omega \in \alpha , n \in \mathbb{N} \}$，
+    如果该集合存在上确界，则第二个命题在 $n = \max{A}$ 时成立。
+
+    先证明集合 $A \neq \varnothing$：
+    \begin{align*}
+        &\text{取\,} p \in \alpha, n < \frac{p}{\omega} \\
+        &\Rightarrow  n \omega < p   \\
+        &\Rightarrow n \in A \\
+        &\Rightarrow A \neq \varnothing
+    \end{align*}
+
+    再证明 $A$ 有上界：
+    \begin{align*}
+        &\text{取\,} q \in \alpha^\complement, m > \frac{q}{\omega} \\
+        &\Rightarrow m \omega > q \\
+        &\Rightarrow m \omega \in \alpha^\complement \\
+        &\Rightarrow \forall n \in A \leadsto n < m \\
+        &\Rightarrow A \text{\, 有上界}
+    \end{align*}
+    以上由确界原理可得，$A$ 有上确界 $\sup{A}$。又因为 $A$ 是有限集，故 $\sup{A} = \max{A}$
+\end{proof}
+
+\begin{question}
+    证明确界原理：$\mathbb{R}$ 的非空子集如果有上界，则必有上确界。
+\end{question}

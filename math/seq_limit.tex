@@ -1,0 +1,66 @@
+% !TeX root = ./main.tex
+
+\section{数列极限}
+\begin{exposition}
+    单调有界数列的收敛性证明需要依靠实数体系的确界定理
+\end{exposition}
+
+\begin{exposition}
+    在实数体系中，实数的完备性确保了其确界原理。
+    确界原理是实数完备性的体现。
+    而阿基米德性只是实数完备性的结果，也就是说阿基米德性是实数完备性的必要不充分条件。
+\end{exposition}
+
+\begin{exposition}
+    数列极限的判别法：
+    对于单调数列，若其有界则可以得知其收敛。
+    对于一般性数列，若满足柯西准则，则其收敛。
+\end{exposition}
+
+\begin{exposition}[上下极限]
+    这一概念的提出是为了在不清楚数列特性的情况下，确定其是否收敛。
+    这里引出符号 $\overline{a_m} = \sup{\{a_k | k > m, m \in N^+\}}$，
+    表示当 $n$ 很大，例如大于 $m$ 时，数列 $\{a_n\}$ 的子集的上确界。
+    相当于 $m$ 将数列 $\{a_n\}$ 分成了两类，$\{a_k | k > m\}$ 称之为上类，
+    相反为下类。由于我们关注的是 $n \to +\infty$ 时 $\{a_n\}$ 的极限，
+    所以我们只取上类。
+
+    与 $\overline{a_m}$ 相对的有 $\underline{a_m} = \inf{\{a_k | k > m, m \in N^+\}}$。
+    表示对 $\{a_n\}$ 的上类去下界。
+
+    要注意的时，不管 $\overline{a_m}$ 还是 $\underline{a_m}$ 都是关于 $m$ 的数列。
+    当这两个数列足够接近的时候，$\{a_n\}$ 存在极限，或者说收敛。形式化表示为：
+    \begin{equation}
+        \lim_{n \to +\infty}{a_n} \text{\, exist} \iff 
+        \overline{a_n} - \underline{a_n} \to 0 \quad (n \to +\infty)
+    \end{equation}
+\end{exposition}
+
+\begin{exposition}[柯西准则]
+    元素随着序数的增加而愈发的靠近的数列，被称为柯西数列。形式化表示为：
+    \begin{equation}
+        \lim_{n\to\infty}{(a_i - a_j)} = 0 \quad (i,j > n)
+    \end{equation}
+    在完备空间中，柯西数列必然收敛，收敛数列也必然时柯西数列。
+\end{exposition}
+
+\begin{exposition}[自然常数 $e$]
+    数列 $a_n = (1+\frac{1}{n})^n$ 为单调递增函数。
+    数列 $b_n = (1+\frac{1}{n})^{n+1}$ 为单调递减函数。
+    \begin{equation}
+        \lim_{n \to \infty}{a_n} = \lim_{n \to \infty}{b_n} = e
+    \end{equation}
+    另外：
+    \begin{align*}
+        &e_n = 1 + \sum_{i=1}{n}{\frac{1}{i!}} \\
+        &a_n < e_n < e \\
+        &\lim_{n \to \infty}{e_n} = e
+    \end{align*}
+\end{exposition}
+
+\begin{exposition}[欧拉常数]
+    \begin{align*}
+        c_n &= 1 + \frac12 + \frac13 + \cdots + \frac1n - \ln{n}\\
+        \gamma &= \lim_{n \to \infty}{c_n} = 0.577215\cdots
+    \end{align*}
+\end{exposition}
