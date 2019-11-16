@@ -44,7 +44,7 @@
     在完备空间中，柯西数列必然收敛，收敛数列也必然时柯西数列。
 \end{exposition}
 
-\begin{exposition}[自然常数 $e$]
+\begin{exposition}[自然常数 $e$]    
     数列 $a_n = (1+\frac{1}{n})^n$ 为单调递增函数。
     数列 $b_n = (1+\frac{1}{n})^{n+1}$ 为单调递减函数。
     \begin{equation}
@@ -63,4 +63,17 @@
         c_n &= 1 + \frac12 + \frac13 + \cdots + \frac1n - \ln{n}\\
         \gamma &= \lim_{n \to \infty}{c_n} = 0.577215\cdots
     \end{align*}
+\end{exposition}
+
+\begin{exposition}[stolz 公式]
+    设有集合 $\{a_n\}$、$\{b_n\}$:
+    \begin{enumerate}
+        \item 若 $\{b_n\}$ 严格单调趋向于 $+\infty$，则
+            \begin{align*}
+                \lim_{n \to \infty}{\frac{a_n - a_{n-1}}{b_n - b_{n-1}}} &= l \\
+                \Rightarrow \lim_{n \to \infty}{\frac{a_n}{b_n}} &= l
+            \end{align*}
+        \item 若 $\lim \limits_{n \to \infty}{b_n} = 0 \land b_n < b_{n-1} \land \lim_{n \to \infty}{a_n} = 0$，则
+            亦可以推出与上面同样的结论。
+    \end{enumerate}
 \end{exposition}
