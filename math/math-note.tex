@@ -1,11 +1,17 @@
 \documentclass{ctexart}
 
-\usepackage{amsthm, amssymb, enumitem, amsmath, hyperref}
+\usepackage{amsthm, amssymb, enumitem, amsmath, hyperref, xcolor}
 \hypersetup{
     pdfauthor={sanfusu@outlook.com}
 }
 \theoremstyle{definition} \newtheorem{question}{题}[section]
 \theoremstyle{definition} \newtheorem{exposition}{述}[section]
+\theoremstyle{definition} \newtheorem{note}{记}[section]
+\newcommand{\notetime}[1]{
+    \textcolor{blue}{
+        \texttt{[#1]}
+    }
+}
 
 \begin{document}
 \title{数学中的一些奇妙的思想}
@@ -14,5 +20,6 @@
 
 \input{real_number.tex}
 \input{seq_limit.tex}
+\input{function.tex}
 
 \end{document}
