@@ -1,0 +1,121 @@
+% !TeX root = ./math-note.tex
+
+\section{函数}
+
+\begin{exposition}
+    设有数列 $\{a_n\}$ 那么 $\{f(a_n)\}$ 依旧是数列。
+    所以有时候对函数的研究可以转换成对数列的研究。
+\end{exposition}
+
+\begin{exposition}
+    实数轴上的一点 $x_0$ 等价于所有以该点为极限的数列的并集。
+    也就是说所有以 $x_0$ 为极限的数列可以确定实轴上的一个实数点。
+\end{exposition}
+
+\begin{note}
+    我们从数学分析中应该学到的不只是计算方法，更多的应该是分析问题的方法。
+    比如函数关系比较，可以通过无穷小的阶；数列没有最值的时候，可以通过确界属性来进行代替。
+\end{note}
+
+\begin{note}
+    函数 $f$ 的微分的斜率是 $f$ 的导数。
+    微分是关于函数自变量的线性映射（在某点处的切线），而导数则是该点的斜率。
+    微分某种意义上给出了函数在极限意义上的一种定义方法（看成 $f$ 的一个线性近似）。
+    $x_0$ 处的微分 $df(x_0)$ 可以写成：
+    \begin{equation*}
+        df(x_0) = f'(x_0)dx(x_0)
+    \end{equation*}
+    微分的另一种形式，若存在常数 $A$，使得
+    \begin{equation*}
+        f(x) = f(x_0) + A(x-x_0) + o(x-x_0) \quad (x \to x_0)
+    \end{equation*}
+    则称 $f$ 在 $x_0$ 处可微，线性映射 $x \mapsto Ax$ 称为 $f$ 在 $x_0$ 处的微分，记为 $df(x_0)$。
+    试问 $o(x - x_0)$ 在此处有何意义？
+\end{note}
+
+\begin{note}
+    导函数的计算由定义可得：
+    \begin{equation*}
+        f'(x) = \lim_{\delta \to 0}{\frac{f(x+\delta) - f(x)}{\delta}}
+    \end{equation*}
+\end{note}
+
+\begin{note}
+    如果导数表示的瞬时的变化量，那么积分表示一段时间内变化量的累加，也就是总的变化量。
+\end{note}
+
+\begin{note}
+    我认为，现阶段应当将各个概念理清楚，明白各个定理（概念）之间的脉络关系，每一个定理是如何作用的。
+    把握好研究问题的思路（或者说入口点）。
+    至于如何计算问题，会在上述完成之后进行专门的训练。
+\end{note}
+
+\begin{note}
+    函数极限关注的是点，而函数导数关注的是点的邻域。
+\end{note}
+
+\begin{note}[微分算子]
+    \begin{equation*}
+        P\varphi = \sum_{k=0}^{n}{a_k(x)\varphi^{(k)}{(x)}}
+    \end{equation*}
+    将 $P$ 称之为一个 $n$ 阶微分算子。
+    关于未知变量 $\varphi$ 的方程 $P\varphi = f$ 称之为 $n$ 阶微分方程。
+    \notetime{2019-11-24 13:39:14}
+\end{note}
+
+\begin{note}[Fermat 定理]
+    费马定理：
+    $x_0$ 为函数 $f$ 在 $I$ 区间内的极值点，且 $x_0$ 为 $I$ 的内点，
+    则 $f'(x_0) = 0$。
+    
+    由 Fermat 定理可以引出达布定理(Darboux) 和 罗尔定理(Rolle)。
+    \notetime{2019-11-24 14:10:38}
+\end{note}
+
+\begin{note}[Darboux 定理]
+    设 $f$ 为 $[a, b]$ 上的可导函数，则 $f'$ 可以取到 $f'_{+}(a)$ 与 $f'_{-}(b)$
+    之间的任意值。
+    \notetime{2019-11-24 14:16:17}
+\end{note}
+
+\begin{note}[Rolle 定理]
+    设函数 $f$ 在 $[a, b]$ 上连续，在 $(a,b)$ 中可微，且 $f(a) = f(b)$。
+    则存在 $\xi \in (a,b)$，使得 $f'(\xi) = 0$。
+    \notetime{2019-11-24 14:20:46}
+\end{note}
+
+\begin{note}
+    Rolle 定理中为何要求可微，而达布定理中要求可导？这两者之间是否存在联系？
+    \notetime{2019-11-24 14:56:34}
+\end{note}
+
+\begin{note}[Lagrange]
+    Lagrange 定理：设函数 $f$ 在 $[a, b]$ 上连续，则 $(a, b)$ 中可微，则存在 $\xi \in (a, b)$，
+    使得
+    \begin{equation*}
+        f'(\xi) = \frac{f(a) - f(b)}{a - b} \text{, 或}\ f(a) - f(b) = f'(\xi)(a-b).
+    \end{equation*}
+
+    Lagrange 定理和微分关系较大一点，表现出函数的线性映射。\strong{（可微和可导一定要分开，两者侧重点不一样）}
+    \notetime{2019-11-24 15:02:23}
+\end{note}
+
+\begin{note}[Cauchy]
+    设函数 $f, g$ 在 $[a, b]$ 上连续，在 $(a, b)$ 中可微，且 $g'(x) \neq 0, \forall x \in (a, b)$。
+    则存在 $\xi \in (a, b)$ 使得
+    \begin{equation*}
+        \frac{f(a) - f(b)}{g(a) - g(b)} = \frac{f'(\xi)}{g'(\xi)}.
+    \end{equation*}
+    \notetime{2019-11-24 15:24:19}
+\end{note}
+
+\begin{note}
+    Rolle、Lagrange 和 Cauchy 都属于微分中值定理范畴。
+    表述为函数变换量和变化率之间的连续。
+    \notetime{2019-11-24 15:26:14}
+\end{note}
+
+\begin{note}
+    由导数可以引出函数单调性、凹凸性、可逆性等一系列问题。
+    同时关注各条件的加强与减弱。
+\end{note}
