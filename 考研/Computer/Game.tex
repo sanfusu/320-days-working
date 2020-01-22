@@ -1,0 +1,101 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{header-n0}{%
+\section{游戏设计（sanfusu@foxma}\label{header-n0}}
+
+\hypertarget{header-n2}{%
+\subsection{基本思想}\label{header-n2}}
+
+游戏的切入点只是一个有着初始框架的世界，游戏本身不属于某个人也不属于某个公司。玩家既是游戏的消费者，也是游戏的创造者，也同时是游戏中的
+NPC，更是游戏的获益者。
+
+\hypertarget{header-n4}{%
+\subsection{几个目标}\label{header-n4}}
+
+游戏剧本和事件触发，玩家可以通过自由的添加剧本和事件节点来丰富游戏。关于剧本和事件的解释：剧本需要演员，演员即是玩家，作者本身只提供剧本，结局可以是多个也可以是单个。剧本中包含各个事件，这些事件需要单个或多个玩家同时或在一段时间内或者不限时间的触发和完成。个体玩家的对事件的完成质量决定了剧本能否顺利演出完成。
+
+\begin{quote}
+如果剧本一旦顺利演出并完成，那么该剧本便可以记录到游戏世界的历史剧本中。其他剧本创作者可以在该剧本的基础上，创造出属于自己的剧本。在宏观上保证游戏世界观的一致性。
+\end{quote}
+
+动作设计，思路和剧本创作者类似。但是动作设计需要建立在剧本基础之上，比如武侠世界观中，自然不会有施法（魔法）的动作出现。游戏框架本身可以提供一些基本动作元素。
+
+交互上，确保更多的玩家和玩家之间的互动，比如任务分发，必须是一个玩家分发任务，其他玩家接受任务。这里面没有太多的
+NPC。
+
+\hypertarget{header-n10}{%
+\subsection{如何让游戏持续的进行下去}\label{header-n10}}
+
+整个设计的思路是让玩家成为游戏的设计者。但是玩家参与这项活动的出发点是什么？这里列出以下几点：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  创作者可以通过高质量的创作获取收益，质量的好坏由玩家决定。玩家通过付出酬劳来获取参与游戏的愉悦感。
+\item
+  存粹的创作者和存粹的休闲者，这帮人只因为有这么个平台可以满足其创作欲望或者帮其打磨事件，而参与到这项活动中。
+\end{enumerate}
+
+\hypertarget{header-n17}{%
+\subsection{困难和潜在的危险点（可行性）}\label{header-n17}}
+
+以上只是粗略的设想，但实际上运营过程中各项数据的平衡如何控制。因为平台很开放，所以是否会发生意想不到的情况？比如剧本创作者为了获取收益，而降低事件的难度，让玩家更容易完成剧本。另外如何让一个多人剧本顺利的完成演出？一个剧本里面有着各种角色，怎么能让一个好的剧本里面的演员到位？也就是说，游戏世界如何下发一个剧本，让该剧本的初试事件节点触发？
+
+\begin{quote}
+比如冬天到了，王奶奶家需要木材烧火取暖，这时候需要一个人将木材送到王奶奶家。
+\end{quote}
+
+那么王奶奶是谁？这个初试事件节点如何触发？这么一个送木材的需求如何展现在玩家眼前？
+
+关于危险点，谁都可以参与游戏的更改，高自由度的参与性必将导致游戏世界的破裂，比如广告以及充满人生攻击的剧本。导致现实和虚拟的混乱。
+
+\end{document}
